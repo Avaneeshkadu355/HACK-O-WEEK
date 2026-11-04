@@ -1,0 +1,467 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #183823;
+  background: #f7f5ee;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --forest: #214a32;
+  --forest-dark: #183823;
+  --green: #356b45;
+  --cream: #f7f5ee;
+  --gold: #e8bf57;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.welcome-page {
+  width: 100%;
+  max-width: 1800px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 6.2%;
+}
+
+.brand-header {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--forest);
+  border-radius: 50% 50% 50% 10px;
+}
+
+.brand-icon svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.brand-name {
+  color: var(--forest);
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand-name span {
+  font-weight: 500;
+}
+
+.tagline {
+  color: var(--forest);
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.welcome-hero {
+  height: clamp(390px, 49vw, 610px);
+  min-height: 390px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #526846;
+}
+
+.marketplace-image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 52%;
+}
+
+.hero-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 43, 26, 0.84) 0%,
+    rgba(24, 51, 30, 0.64) 38%,
+    rgba(24, 51, 30, 0.12) 100%
+  );
+}
+
+.hero-message {
+  width: min(650px, 80%);
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #e8edda;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-label::before {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.hero-message h1 {
+  margin: 24px 0 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(42px, 6.1vw, 82px);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -4px;
+}
+
+.hero-message p {
+  max-width: 420px;
+  margin: 22px 0 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.image-caption {
+  position: absolute;
+  right: 25px;
+  bottom: 24px;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+.entry-section {
+  width: 100%;
+  max-width: 760px;
+  margin: 36px auto 0;
+}
+
+.entry-heading {
+  margin: 0 0 16px;
+  color: #72786d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.entry-buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.entry-button {
+  min-width: 0;
+  min-height: 94px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid transparent;
+  transition: transform 180ms ease;
+}
+
+.entry-button:hover {
+  transform: translateY(-3px);
+}
+
+.farmer-button,
+.farmer-button:visited,
+.farmer-button:hover,
+.farmer-button:focus-visible,
+.farmer-button:active {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: #fff;
+}
+
+.farmer-button:hover {
+  background: var(--forest-dark);
+  border-color: var(--forest-dark);
+}
+
+.buyer-button,
+.buyer-button:visited,
+.buyer-button:hover,
+.buyer-button:focus,
+.buyer-button:focus-visible,
+.buyer-button:active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--forest-dark);
+}
+
+.entry-copy {
+  min-width: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.entry-copy strong {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+
+.entry-copy small {
+  display: block;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.farmer-button strong,
+.farmer-button small {
+  color: #fff;
+}
+
+.buyer-button strong,
+.buyer-button small {
+  color: var(--forest-dark);
+  opacity: 1;
+}
+
+.entry-icon {
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 17px;
+}
+
+.welcome-footer {
+  padding: 32px 0 25px;
+  color: #8a8d81;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 2;
+  text-align: center;
+}
+
+.welcome-footer span {
+  margin: 0 8px;
+  color: var(--green);
+}
+
+@media (max-width: 760px) {
+  .welcome-page {
+    padding: 0 4%;
+  }
+
+  .brand-header {
+    min-height: 85px;
+    gap: 12px;
+  }
+
+  .brand-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .brand-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .tagline {
+    max-width: 180px;
+    font-size: 10px;
+  }
+
+  .welcome-hero {
+    height: 470px;
+  }
+
+  .hero-message {
+    width: 88%;
+    left: 6%;
+  }
+
+  .hero-message h1 {
+    font-size: clamp(42px, 8vw, 62px);
+    letter-spacing: -2px;
+  }
+
+  .hero-message p {
+    max-width: 350px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-header {
+    min-height: 78px;
+    gap: 8px;
+  }
+
+  .brand {
+    gap: 7px;
+  }
+
+  .brand-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .brand-name {
+    font-size: 13px;
+    letter-spacing: -0.5px;
+  }
+
+  .tagline {
+    max-width: 135px;
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .welcome-hero {
+    height: 420px;
+    min-height: 420px;
+  }
+
+  .marketplace-image {
+    object-position: 58% center;
+  }
+
+  .hero-message {
+    width: 88%;
+    left: 6%;
+  }
+
+  .hero-label {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+
+  .hero-message h1 {
+    margin-top: 20px;
+    font-size: clamp(38px, 10vw, 49px);
+    letter-spacing: -2px;
+  }
+
+  .hero-message p {
+    margin-top: 17px;
+    font-size: 12px;
+  }
+
+  .image-caption {
+    right: 12px;
+    bottom: 14px;
+    left: 12px;
+    font-size: 7px;
+  }
+
+  .entry-section {
+    margin-top: 25px;
+  }
+
+  .entry-heading {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .entry-buttons {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .entry-button {
+    min-height: 76px;
+    padding: 14px 17px;
+  }
+
+  .entry-copy strong {
+    font-size: 17px;
+  }
+
+  .entry-copy small {
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
